@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <style> 
+
+  body {
+  background: radial-gradient(ellipse at center, rgba(169, 3, 41, 0.1) 0%, rgba(137, 41, 0, 0.2) 100%), url('http://flashingmoose.com/fun/codepen/img/paper.png');
+  ;
+  /* W3C */
+}
+
+hgroup {
+  position: relative;
+}
+
+hgroup:before {
+  content: " ";
+  display: block;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 255, 0, .3);
+  -webkit-transform: rotate(45deg);
+}
+
+hgroup:after {
+  content: " ";
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: yellow;
+  -webkit-transform: rotate(45deg);
+}
+
+h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 120px;
+  font-weight:700;
+}
+
+.l1 {
+  color: black;
+  /* Fallback: assume this color ON TOP of image */
+  
+  background: url(http://flashingmoose.com/fun/codepen/img/p1.png);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: changeImg 4s infinite;
+}
+
+@-webkit-keyframes changeImg {
+  0% {
+    background: url(http://flashingmoose.com/fun/codepen/img/p1.png);
+  }
+  50% {
+    background: url(http://flashingmoose.com/fun/codepen/img/p2.png);
+  }
+}
+
+.l2 {
+  top: 0;
+  left: 0px;
+  color: black;
+  background: url(img/blocks.png);
+  -webkit-background-size: 300% 300%;
+  background-size: 500% 500%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.l3 {
+  top: 10px;
+  left: 20px;
+  color: white;
+  background-position: -200px;
+  text-shadow: 10px 10px 10px rgba(0, 0, 0, .3);
+}
+
+.l3 span {
+  color: deeppink;
+  -webkit-animation: blink 0.01s 1s infinite;
+}
+
+@-webkit-keyframes blink {
+  from {
+    color: deeppink;
+  }
+  to {
+    color: yellow;
+  }
+}
+  </style>
+<hgroup>
+  <h1 class="l1">Hello Worl<span>d</span></h1>
+  <h1 class="l2">Hello Worl<span>d</span></h1>
+  <h1 class="l3">Hello Worl<span>d</span></h1>
+</hgroup>
